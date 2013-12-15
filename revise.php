@@ -9,33 +9,36 @@
 
 <img style="border-width: 0px;" src="http://www.bonder.com/images/under-construction.gif" width="452" height="478" />
 
-<?php
-mysql_connect('Crosshill.db.4683335.hostedresource.com', 'Crosshill', 'WJB@Crosshill4') or die(mysql_error());
-mysql_select_db("Crosshill") or die(mysql_error());
+<table cellpadding="10">
+<tr>
+<td>ID</td>
+<td>First Name</td>
+<td>Last Name</td>
+<td>E-mail</td>
+<td>Phone</td>
+</tr>
 
-$UID = (int)$_GET['employeeid'];
-$query = mysql_query("SELECT * FROM Employees WHERE employeeid = '$UID'") or die(mysql_error());
-
-if(mysql_num_rows($query)>=1){
-    while($row = mysql_fetch_array($query)) {
-        $firstname = $row['firstname'];
-        $lastname = $row['lastname'];
-        $department = $row['department'];
-     
-    }
-?>
-<form action="update.php" method="post">
-<input type="hidden" name="ID" value="<?=$UID;?>">
-First Name: <input type="text" name="ud_firstname" value="<?=$firstname?>"><br>
-Last Name: <input type="text" name="ud_lastname" value="<?=$lastname?>"><br>
-Department: <input type="text" name="ud_department" value="<?=$department?>"><br>
-<input type="Submit">
-</form>
 <?php
 
-}else{
-    echo 'No entry found. <a href="javascript:history.back()">Go back</a>';
+$username="Crosshill";
+$password="WJB@Crosshill4";
+$database="Crosshill";
+
+mysql_connect("Crosshill.db.4683335.hostedresource.com",$username,$password);
+@mysql_select_db($database) or die( "Unable to select database");
+$query="SELECT * FROM Employees";
+$result=mysql_query($query);
+mysql_close();
+
+while ($row=mysql_fetch_array($result)){
+echo ("<tr><td>$row[employeeid]</td>");
+echo ("<td>$row[firstname]</td>");
+echo ("<td>$row[lastname]</td>");
+echo ("<td>$row[department]</td>");
+echo ("<td><a href=\"EmployeeEdit.php?id=$row[id]\">Edit</a></td></tr>");
 }
+echo "</table>";
+
 ?>	
 
 <br><br>
