@@ -7,7 +7,7 @@
 	<body>
 
 
-<img style="border-width: 0px;" src="http://www.bonder.com/images/under-construction.gif" width="452" height="478" />
+<img style="border-width: 0px;" src="http://www.bonder.com/images/under-construction.gif" width="252" height="178" />
 
 <table cellpadding="10">
 <tr>
