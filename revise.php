@@ -14,7 +14,7 @@ mysql_connect('Crosshill.db.4683335.hostedresource.com', 'Crosshill', 'WJB@Cross
 mysql_select_db("Crosshill") or die(mysql_error());
 
 $UID = (int)$_GET['employeeid'];
-$query = mysql_query("SELECT * FROM Employees WHERE id = '$UID'") or die(mysql_error());
+$query = mysql_query("SELECT * FROM Employees WHERE employeeid = '$UID'") or die(mysql_error());
 
 if(mysql_num_rows($query)>=1){
     while($row = mysql_fetch_array($query)) {
