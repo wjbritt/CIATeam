@@ -46,7 +46,6 @@ Department: <input type="text" name="department">
 
 <! - Post form information to DB uses insert.php page
 
-<! - below is experimental - trying to display a query in a table
 
 <HR WIDTH="100% SIZE="4">
 <br><br>
