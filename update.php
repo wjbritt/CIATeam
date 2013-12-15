@@ -9,7 +9,7 @@
 
  <?php
     mysql_connect('Crosshill.db.4683335.hostedresource.com', 'Crosshill', 'WJB@Crosshill4') or die(mysql_error());
-    mysql_select_db("Employees") or die(mysql_error());
+    mysql_select_db("Crosshill") or die(mysql_error());
 
     $ud_ID = (int)$_POST["ID"];
 
