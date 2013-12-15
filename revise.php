@@ -35,7 +35,7 @@ echo ("<tr><td>$row[employeeid]</td>");
 echo ("<td>$row[firstname]</td>");
 echo ("<td>$row[lastname]</td>");
 echo ("<td>$row[department]</td>");
-echo ("<td><a href=\"EmployeeEdit.php?id=$row[id]\">Edit</a></td></tr>");
+echo ("<td><a href=\"EmployeeEdit.php?id=$row[employeeid]\">Edit</a></td></tr>");
 }
 echo "</table>";
 
