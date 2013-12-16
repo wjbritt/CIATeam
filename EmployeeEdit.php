@@ -32,7 +32,7 @@ mysql_close();
 </tr>
 
 <tr>
-<td>Phone Number:</td>
+<td>Department:</td>
 <td><input type="text" name="department" value="<? echo "$row[department]" ?>"></td>
 </tr>
 
