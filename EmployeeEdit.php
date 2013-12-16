@@ -10,7 +10,7 @@ $employeeid = $_GET[employeeid];
 $query = "SELECT * FROM Employees WHERE id = 'employeeid'"; 
 $result = mysql_query($query);
 $row = mysql_fetch_array($result);
-mysql_close();
+
 ?>
 
 <form method="post" action="EditEmployeeData.php" />
